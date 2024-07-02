@@ -31,12 +31,12 @@ def user_turn():
              if bot_choice == "trigger":
                 print("The bot has decided to pull the trigger..")
                 time.sleep(1)
-                bot_death = random.choice([True, False, False, False, False, False]) #Bot death chance 1:6
-                if bot_death == True:
-                     print("The bot has died, you win!")
+                bot_user_kill = random.choice([True, False, False, False, False, False]) #Bot death chance 1:6
+                if bot_user_kill == True:
+                     print("The bot has killed you!")
                      print(play_again())
                 else:
-                  keep_playing2 =  input("The bot has survived, keep playing? (y/n): ").lower() #Asks the user if he wishes to continue playing if bot survived
+                  keep_playing2 =  input("The gun didnt go off, keep playing? (y/n): ").lower() #Asks the user if he wishes to continue playing if bot didnt kill him
                   if keep_playing2 == "y":
                       print(play_again())
                   else:
